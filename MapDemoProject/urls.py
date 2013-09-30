@@ -17,6 +17,7 @@ urlpatterns = patterns('',
                        url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
                        url(r'^notes/', views.NoteList.as_view()),
+                       url(r'^notes/(?P<pk>[0-9]+)/$', views.NoteDetail.as_view()),
 
                        # Uncomment the next line to enable the admin:
                        url(r'^admin/', include(admin.site.urls)),
